@@ -73,39 +73,48 @@ export default function LessenPage() {
     <>
       <Header />
       <div className="min-h-screen bg-background">
-        <section className="relative w-full min-h-[100vh] flex items-center justify-center overflow-hidden pt-20 md:pt-20">
+        <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden pt-20 md:pt-24 bg-gradient-to-br from-white via-orange-50/30 to-white">
+          {/* Decorative Background Elements */}
           <div className="absolute inset-0 z-0">
-            <img src="/driving-road.jpg" alt="Leren Autorijden" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/70" />
+            {/* Subtle grid pattern */}
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fillRule=\'evenodd\'%3E%3Cg fill=\'%23ea580c\' fillOpacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
+            {/* Large SAFE watermark */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-[0.04]">
+              <div className="text-[12rem] sm:text-[18rem] lg:text-[24rem] font-bold text-primary select-none tracking-tight">SAFE</div>
+            </div>
+            {/* Decorative circles */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 sm:w-96 sm:h-96 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-48 h-48 sm:w-72 sm:h-72 bg-orange-200/20 rounded-full blur-3xl" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-0">
-            <div className="max-w-4xl">
-              <div className="inline-block mb-6 px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/30 animate-fade-in">
-                <span className="text-sm font-medium text-white">✓ Flexibel & Op Maat</span>
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+                <Car className="w-4 h-4" />
+                CBR Erkende Rijschool
               </div>
 
               <h1
-                className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight text-balance animate-fade-in"
+                className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight text-balance animate-fade-in"
                 style={{ animationDelay: "0.1s" }}
               >
-                Leren Autorijden
+                Jouw Rijbewijs,
                 <br />
-                <span className="text-orange-300">Met Henry</span>
+                <span className="text-primary">Onze Expertise</span>
               </h1>
 
               <p
-                className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 leading-relaxed text-pretty max-w-2xl animate-fade-in"
+                className="text-sm sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed text-pretty max-w-2xl mx-auto animate-fade-in"
                 style={{ animationDelay: "0.2s" }}
               >
-                Leren autorijden is een spannende en nieuwe uitdaging. Ik help je daar graag bij met geduld en
-                professionele begeleiding.
+                Van proefles tot rijbewijs. Persoonlijke begeleiding, flexibele lestijden en een hoog slagingspercentage.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white text-base md:text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full sm:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-white text-base md:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto shadow-lg shadow-primary/25"
                   asChild
                 >
                   <Link href="/contact">
@@ -116,48 +125,58 @@ export default function LessenPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 backdrop-blur-md border-white/40 text-white hover:bg-white/20 text-base md:text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full sm:w-auto"
+                  className="border-primary text-primary hover:bg-primary hover:text-white text-base md:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto bg-transparent"
                   asChild
                 >
                   <Link href="/prijzen">Bekijk Pakketten</Link>
                 </Button>
               </div>
-            </div>
-          </div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-              <div className="w-1.5 h-3 bg-white/50 rounded-full" />
+              {/* Stats row */}
+              <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-10 sm:mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-primary">95%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Slagingspercentage</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-primary">500+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Geslaagde Leerlingen</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-primary">10+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Jaar Ervaring</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Les Types */}
-        <section className="py-20 lg:py-28">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-4">Ons Les Aanbod</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <section className="py-12 sm:py-16 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Ons Les Aanbod</h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Van gratis proefles tot complete lespakketten. Kies wat bij jou past.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
               {lesTypes.map((type, index) => (
                 <Card key={index} className="border-2 hover:border-primary/50 transition-all hover:shadow-lg">
-                  <CardHeader>
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                      <type.icon className="w-7 h-7 text-primary" />
+                  <CardHeader className="p-4 sm:p-6">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4">
+                      <type.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                     </div>
-                    <CardTitle className="text-2xl">{type.title}</CardTitle>
-                    <CardDescription className="text-base">{type.description}</CardDescription>
+                    <CardTitle className="text-xl sm:text-2xl">{type.title}</CardTitle>
+                    <CardDescription className="text-sm sm:text-base">{type.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
+                  <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+                    <ul className="space-y-2 sm:space-y-3">
                       {type.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{feature}</span>
+                        <li key={idx} className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm sm:text-base text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -169,33 +188,33 @@ export default function LessenPage() {
         </section>
 
         {/* Process */}
-        <section className="py-20 lg:py-28 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-4">Hoe Werken Wij?</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <section className="py-12 sm:py-16 lg:py-24 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Hoe Werken Wij?</h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Van eerste les tot rijbewijs in 5 stappen
               </p>
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 {process.map((item, index) => (
-                  <div key={index} className="flex gap-6 items-start">
-                    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold">
+                  <div key={index} className="flex gap-4 sm:gap-6 items-start">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary text-white flex items-center justify-center text-lg sm:text-2xl font-bold">
                       {item.step}
                     </div>
-                    <div className="flex-1 pt-2">
-                      <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                      <p className="text-lg text-muted-foreground">{item.description}</p>
+                    <div className="flex-1 pt-1 sm:pt-2">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-1 sm:mb-2">{item.title}</h3>
+                      <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">{item.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="text-center mt-12">
-              <Button size="lg" asChild>
+            <div className="text-center mt-8 sm:mt-12">
+              <Button size="lg" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">Start Nu Met Een Proefles</Link>
               </Button>
             </div>
@@ -203,21 +222,21 @@ export default function LessenPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 lg:py-28 bg-primary text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">Klaar Om Te Beginnen?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        <section className="py-12 sm:py-16 lg:py-24 bg-primary text-white">
+          <div className="container mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Klaar Om Te Beginnen?</h2>
+            <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Neem contact op voor een gratis proefles of bekijk onze voordelige lespakketten.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">Gratis Proefles</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-white text-white hover:bg-white hover:text-primary bg-transparent"
+                className="border-white text-white hover:bg-white hover:text-primary bg-transparent w-full sm:w-auto"
               >
                 <Link href="/prijzen">Bekijk Prijzen</Link>
               </Button>

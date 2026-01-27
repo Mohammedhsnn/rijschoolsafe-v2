@@ -46,36 +46,58 @@ export default function ContactPage() {
     <>
       <Header />
       <div className="min-h-screen bg-background">
-        <section className="relative w-full min-h-[100vh] flex items-center justify-center overflow-hidden pt-20 md:pt-20">
+        <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden pt-20 md:pt-24 bg-gradient-to-br from-white via-slate-50/50 to-orange-50/30">
+          {/* Decorative Background Elements */}
           <div className="absolute inset-0 z-0">
-            <img src="/contact-communication.jpg" alt="Contact" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/70" />
+            {/* Dot pattern */}
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #ea580c 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+            {/* Decorative elements */}
+            <div className="absolute top-20 right-10 sm:right-20">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-primary/20 rounded-full flex items-center justify-center">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary/30" />
+              </div>
+            </div>
+            <div className="absolute bottom-20 left-10 sm:left-20">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-primary/20 rounded-lg flex items-center justify-center rotate-12">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary/30" />
+              </div>
+            </div>
+            <div className="absolute top-1/3 left-1/4 hidden lg:block">
+              <div className="w-10 h-10 border-2 border-primary/15 rounded-full" />
+            </div>
+            {/* Gradient orbs */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-orange-100/30 rounded-full blur-3xl" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-0">
-            <div className="max-w-4xl">
-              <div className="inline-block mb-6 px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/30 animate-fade-in">
-                <span className="text-sm font-medium text-white">✓ Altijd Bereikbaar</span>
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Friendly badge */}
+              <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+                <Clock className="w-4 h-4" />
+                Snel Antwoord Gegarandeerd
               </div>
 
               <h1
-                className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight text-balance animate-fade-in"
+                className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight text-balance animate-fade-in"
                 style={{ animationDelay: "0.1s" }}
               >
-                Neem Contact Op
+                Laten We
+                <br />
+                <span className="text-primary">Kennismaken!</span>
               </h1>
 
               <p
-                className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 leading-relaxed text-pretty max-w-2xl animate-fade-in"
+                className="text-sm sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed text-pretty max-w-2xl mx-auto animate-fade-in"
                 style={{ animationDelay: "0.2s" }}
               >
-                Heb je vragen of wil je een gratis proefles boeken? Neem gerust contact met ons op!
+                Klaar om te starten? Bel, mail of vul het formulier in. Ik reageer binnen 24 uur!
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white text-base md:text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full sm:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-white text-base md:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto shadow-lg shadow-primary/25"
                   asChild
                 >
                   <a href="tel:+31640146812">
@@ -86,61 +108,71 @@ export default function ContactPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 backdrop-blur-md border-white/40 text-white hover:bg-white/20 text-base md:text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full sm:w-auto"
+                  className="border-primary text-primary hover:bg-primary hover:text-white text-base md:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto bg-transparent"
                   asChild
                 >
                   <a href="mailto:info@rijschoolsafe.nl">Stuur Email</a>
                 </Button>
               </div>
-            </div>
-          </div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-              <div className="w-1.5 h-3 bg-white/50 rounded-full" />
+              {/* Contact info cards row */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mt-10 sm:mt-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 shadow-sm">
+                  <Phone className="w-5 h-5 text-primary mx-auto mb-2" />
+                  <p className="text-xs sm:text-sm font-medium">+31 6 40146812</p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 shadow-sm">
+                  <MapPin className="w-5 h-5 text-primary mx-auto mb-2" />
+                  <p className="text-xs sm:text-sm font-medium">Axel, Zeeland</p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 shadow-sm col-span-2 sm:col-span-1">
+                  <Clock className="w-5 h-5 text-primary mx-auto mb-2" />
+                  <p className="text-xs sm:text-sm font-medium">Ma-Vr: 09:00-20:00</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Contact Info Cards */}
-        <section className="py-20 lg:py-28">
-          <div className="container mx-auto px-4">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-20">
+        <section className="py-12 sm:py-16 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-6xl mx-auto mb-12 sm:mb-20">
               {contactInfo.map((info, index) => (
                 <Card
                   key={index}
                   className="border-2 hover:border-primary/50 transition-all hover:shadow-lg text-center"
                 >
-                  <CardHeader>
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <info.icon className="w-7 h-7 text-primary" />
+                  <CardHeader className="p-3 sm:p-6">
+                    <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-2 sm:mb-4">
+                      <info.icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
                     </div>
-                    <CardTitle className="text-lg">{info.title}</CardTitle>
+                    <CardTitle className="text-sm sm:text-lg">{info.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-3 sm:p-6 pt-0 sm:pt-0">
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-words"
                         target={info.link.startsWith("http") ? "_blank" : undefined}
                         rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
                       >
                         {info.content}
                       </a>
                     ) : (
-                      <p className="text-muted-foreground">{info.content}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{info.content}</p>
                     )}
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
               {/* Contact Form */}
               <div>
-                <div className="mb-8">
-                  <h2 className="text-3xl lg:text-4xl font-bold mb-4">Stuur Een Bericht</h2>
-                  <p className="text-lg text-muted-foreground">
+                <div className="mb-6 sm:mb-8">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Stuur Een Bericht</h2>
+                  <p className="text-base sm:text-lg text-muted-foreground">
                     Vul het formulier in en we nemen zo snel mogelijk contact met je op.
                   </p>
                 </div>
@@ -195,9 +227,9 @@ export default function ContactPage() {
 
               {/* Map & Business Info */}
               <div>
-                <div className="mb-8">
-                  <h2 className="text-3xl lg:text-4xl font-bold mb-4">Locatie & Informatie</h2>
-                  <p className="text-lg text-muted-foreground">
+                <div className="mb-6 sm:mb-8">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Locatie & Informatie</h2>
+                  <p className="text-base sm:text-lg text-muted-foreground">
                     Rijschool Safe is gevestigd in Axel en actief in de regio Zeeuws-Vlaanderen.
                   </p>
                 </div>
@@ -256,21 +288,21 @@ export default function ContactPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 lg:py-28 bg-primary text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Gratis Proefles?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        <section className="py-12 sm:py-16 lg:py-24 bg-primary text-white">
+          <div className="container mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Gratis Proefles?</h2>
+            <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Wil je kennismaken? Kom dan een gratis proefles doen van 50 minuten, inclusief evaluatiegesprek.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
                 <a href="tel:+31640146812">Bel Direct</a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-white text-white hover:bg-white hover:text-primary bg-transparent"
+                className="border-white text-white hover:bg-white hover:text-primary bg-transparent w-full sm:w-auto"
               >
                 <a href="mailto:info@rijschoolsafe.nl">Stuur Email</a>
               </Button>

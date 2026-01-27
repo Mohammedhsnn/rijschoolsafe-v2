@@ -1,4 +1,4 @@
-import { Check, Info, ArrowRight } from "lucide-react"
+import { Check, Info, ArrowRight, Euro, Gift, Percent } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -96,38 +96,61 @@ export default function PrijzenPage() {
     <>
       <Header />
       <div className="min-h-screen bg-background">
-        <section className="relative w-full min-h-[100vh] flex items-center justify-center overflow-hidden pt-20 md:pt-20">
+        <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden pt-20 md:pt-24 bg-gradient-to-br from-white via-green-50/30 to-orange-50/20">
+          {/* Decorative Background Elements */}
           <div className="absolute inset-0 z-0">
-            <img src="/modern-car-dashboard.png" alt="Prijzen & Pakketten" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/70" />
+            {/* Subtle pattern */}
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #ea580c 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+            {/* Decorative price tags */}
+            <div className="absolute top-24 right-10 sm:right-20">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-primary/20 rounded-full flex items-center justify-center rotate-12">
+                <Euro className="w-5 h-5 sm:w-6 sm:h-6 text-primary/30" />
+              </div>
+            </div>
+            <div className="absolute bottom-24 left-10 sm:left-20">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-green-500/20 rounded-lg flex items-center justify-center -rotate-12">
+                <Percent className="w-5 h-5 sm:w-6 sm:h-6 text-green-500/30" />
+              </div>
+            </div>
+            <div className="absolute top-1/3 left-1/4 hidden lg:block">
+              <div className="w-10 h-10 border-2 border-primary/15 rounded-full" />
+            </div>
+            <div className="absolute bottom-1/3 right-1/4 hidden lg:block">
+              <div className="w-8 h-8 bg-green-500/10 rounded-lg rotate-45" />
+            </div>
+            {/* Gradient orbs */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-green-100/40 rounded-full blur-3xl" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-0">
-            <div className="max-w-4xl">
-              <div className="inline-block mb-6 px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/30 animate-fade-in">
-                <span className="text-sm font-medium text-white">✓ Transparante Prijzen</span>
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Value badge */}
+              <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+                <Gift className="w-4 h-4" />
+                Voordelige Lespakketten
               </div>
 
               <h1
-                className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight text-balance animate-fade-in"
+                className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight text-balance animate-fade-in"
                 style={{ animationDelay: "0.1s" }}
               >
-                Prijzen &
+                Transparante
                 <br />
-                <span className="text-orange-300">Pakketten</span>
+                <span className="text-primary">Prijzen</span>
               </h1>
 
               <p
-                className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 leading-relaxed text-pretty max-w-2xl animate-fade-in"
+                className="text-sm sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed text-pretty max-w-2xl mx-auto animate-fade-in"
                 style={{ animationDelay: "0.2s" }}
               >
-                Lespakketten op maat. Uiteraard kan je bij ons losse lessen nemen, maar een pakket geeft veel voordelen.
+                Geen verborgen kosten. Kies een pakket of losse lessen - altijd de beste prijs-kwaliteitverhouding.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white text-base md:text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full sm:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-white text-base md:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto shadow-lg shadow-primary/25"
                   asChild
                 >
                   <Link href="/contact">
@@ -138,61 +161,71 @@ export default function PrijzenPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 backdrop-blur-md border-white/40 text-white hover:bg-white/20 text-base md:text-lg px-8 py-6 h-auto shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full sm:w-auto"
+                  className="border-primary text-primary hover:bg-primary hover:text-white text-base md:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto bg-transparent"
                   asChild
                 >
                   <Link href="/lessen">Bekijk Lessen</Link>
                 </Button>
               </div>
-            </div>
-          </div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-              <div className="w-1.5 h-3 bg-white/50 rounded-full" />
+              {/* Price highlights */}
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-10 sm:mt-12 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm">
+                  <p className="text-lg sm:text-2xl font-bold text-primary">Vanaf</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">€55,- per les</p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-500/20 shadow-sm">
+                  <p className="text-lg sm:text-2xl font-bold text-green-600">Gratis</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Proefles</p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm">
+                  <p className="text-lg sm:text-2xl font-bold text-primary">6</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Pakketten</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Pakketten */}
-        <section className="py-20 lg:py-28">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-4">Lespakketten</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <section className="py-12 sm:py-16 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Lespakketten</h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Kies het pakket dat bij jou past. Alle pakketten zijn flexibel uit te breiden.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
               {pakketten.map((pakket, index) => (
                 <Card
                   key={index}
                   className={`relative border-2 hover:shadow-xl transition-all ${pakket.popular ? "border-primary shadow-lg" : "hover:border-primary/50"}`}
                 >
                   {pakket.popular && (
-                    <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary">Populair</Badge>
+                    <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-xs sm:text-sm">Populair</Badge>
                   )}
-                  <CardHeader>
-                    <CardTitle className="text-2xl">{pakket.name}</CardTitle>
-                    <CardDescription className="text-base">{pakket.description}</CardDescription>
-                    <div className="pt-4">
-                      <span className="text-5xl font-bold">€{pakket.price}</span>
+                  <CardHeader className="p-4 sm:p-6">
+                    <CardTitle className="text-lg sm:text-xl lg:text-2xl">{pakket.name}</CardTitle>
+                    <CardDescription className="text-sm sm:text-base">{pakket.description}</CardDescription>
+                    <div className="pt-3 sm:pt-4">
+                      <span className="text-3xl sm:text-4xl lg:text-5xl font-bold">€{pakket.price}</span>
                       <span className="text-muted-foreground">,-</span>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
+                  <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+                    <ul className="space-y-2 sm:space-y-3">
                       {pakket.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{feature}</span>
+                        <li key={idx} className="flex items-start gap-2 sm:gap-3">
+                          <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-xs sm:text-sm text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </CardContent>
-                  <CardFooter>
-                    <Button className="w-full" variant={pakket.popular ? "default" : "outline"} asChild>
+                  <CardFooter className="p-4 sm:p-6 pt-0 sm:pt-0">
+                    <Button className="w-full text-sm sm:text-base" variant={pakket.popular ? "default" : "outline"} asChild>
                       <Link href="/contact">Kies Dit Pakket</Link>
                     </Button>
                   </CardFooter>
@@ -203,30 +236,30 @@ export default function PrijzenPage() {
         </section>
 
         {/* Losse Prijzen */}
-        <section className="py-20 lg:py-28 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-4">Losse Prijzen</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <section className="py-12 sm:py-16 lg:py-24 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Losse Prijzen</h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Liever losse lessen of diensten? Bekijk hier onze tarieven.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
               {lossePrijzen.map((category, index) => (
                 <Card key={index} className="border-2">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">{category.category}</CardTitle>
+                  <CardHeader className="p-4 sm:p-6">
+                    <CardTitle className="text-lg sm:text-xl lg:text-2xl">{category.category}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-4">
+                  <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+                    <ul className="space-y-3 sm:space-y-4">
                       {category.items.map((item, idx) => (
                         <li
                           key={idx}
-                          className="flex justify-between items-start gap-4 pb-4 border-b last:border-0 last:pb-0"
+                          className="flex justify-between items-start gap-2 sm:gap-4 pb-3 sm:pb-4 border-b last:border-0 last:pb-0"
                         >
-                          <span className="text-muted-foreground">{item.name}</span>
-                          <span className="font-semibold whitespace-nowrap">{item.price}</span>
+                          <span className="text-xs sm:text-sm text-muted-foreground">{item.name}</span>
+                          <span className="text-sm sm:text-base font-semibold whitespace-nowrap">{item.price}</span>
                         </li>
                       ))}
                     </ul>
@@ -289,13 +322,13 @@ export default function PrijzenPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 lg:py-28 bg-primary text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Nog Vragen Over Onze Prijzen?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        <section className="py-12 sm:py-16 lg:py-24 bg-primary text-white">
+          <div className="container mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Nog Vragen Over Onze Prijzen?</h2>
+            <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Neem gerust contact op. We helpen je graag bij het kiezen van het juiste pakket.
             </p>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
               <Link href="/contact">Neem Contact Op</Link>
             </Button>
           </div>
