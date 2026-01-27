@@ -135,15 +135,15 @@ export default function LessenPage() {
               {/* Stats row */}
               <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-10 sm:mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-primary">95%</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-primary">70%</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Slagingspercentage</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-primary">500+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-primary">250+</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Geslaagde Leerlingen</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-primary">10+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-primary">9+</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Jaar Ervaring</div>
                 </div>
               </div>

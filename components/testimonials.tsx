@@ -4,19 +4,22 @@ import { Star } from "lucide-react"
 export function Testimonials() {
   const testimonials = [
     {
-      name: "Emma van der Berg",
+      name: "Elise Laroy",
       rating: 5,
-      text: "Er word aandachtig tijd besteed aan hoe je de handelingen tot je neemt en daarna ook aan je tekortkomingen. Rijschool waar je daadwerkelijk het examen in één keer haalt nadat je het gevoel hebt gehaald! Heel erg bedankt!",
+      text: "Henry is een hele goede instructeur, die heel veel geduld heeft. Hij heeft me na wat mindere ervaringen terug zelfvertrouwen gegeven en ervoor gezorgd dat ik in 1x slaagde!!",
+      source: "Google"
     },
     {
-      name: "Lars Janssen",
+      name: "Anique Fermont",
       rating: 5,
-      text: "Communicatie, Kwaliteit, Professionaliteit, Waarde. Ik heb mijn rijbewijs gehaald bij Rijschool Safe en ben zeer tevreden. De lessen waren leerzaam en de instructeur was geduldig en professioneel.",
+      text: "Alle lof voor Henry! Onze dochter Floortje voor de eerste keer geslaagd. Het was een lange weg, maar het vertrouwen in Floortje en de eerlijke info vanuit Henry heeft geresulteerd in dit prachtige resultaat.",
+      source: "Google"
     },
     {
-      name: "Sophie Vermeulen",
+      name: "Alvin Lampe",
       rating: 5,
-      text: "Top rijschool! Henry is een uitstekende instructeur die rustig en duidelijk uitlegt. Dankzij hem heb ik mijn rijbewijs in één keer gehaald. Aanrader!",
+      text: "Geduldige en gezellige instructeur, bedankt voor alles wat je mij geleerd hebt!",
+      source: "Google"
     },
   ]
 
@@ -43,7 +46,10 @@ export function Testimonials() {
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed italic">
                 "{testimonial.text}"
               </p>
-              <div className="text-sm sm:text-base font-semibold">{testimonial.name}</div>
+              <div className="flex items-center justify-between">
+                <div className="text-sm sm:text-base font-semibold">{testimonial.name}</div>
+                <div className="text-xs text-muted-foreground/60">via Google</div>
+              </div>
             </Card>
           ))}
         </div>
