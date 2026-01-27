@@ -9,55 +9,55 @@ import { Footer } from "@/components/footer"
 export default function PrijzenPage() {
   const pakketten = [
     {
-      name: "Theorie Pakket",
-      price: "125",
+      name: "Theorie Auto (B)",
+      price: "135",
       description: "Alles wat je nodig hebt voor je theorie-examen",
       features: ["1 Theorieboek", "1 Online Cursus", "1 Theorie Examen"],
       popular: false,
     },
     {
-      name: "Basis Pakket",
-      price: "1299",
+      name: "Startpakket Auto (B)",
+      price: "1415",
       description: "20 rijlessen om je op weg te helpen",
       features: [
         "20 Rijlessen (50 min)",
+        "1 Praktijk-examen",
         "Optioneel: Tussentijdse Toets (+€275,-)",
-        "Optioneel: Praktijk-examen (+€300,-)",
       ],
       popular: false,
     },
     {
-      name: "Standaard Pakket",
-      price: "1775",
+      name: "30 Lessenpakket",
+      price: "1950",
       description: "30 rijlessen voor een solide basis",
       features: [
         "30 Rijlessen (50 min)",
+        "1 Praktijk-examen",
         "Optioneel: Tussentijdse Toets (+€275,-)",
-        "Optioneel: Praktijk-examen (+€300,-)",
       ],
       popular: true,
     },
     {
-      name: "Uitgebreid Pakket",
-      price: "2250",
+      name: "40 Lessenpakket",
+      price: "2465",
       description: "40 rijlessen voor extra oefening",
       features: [
         "40 Rijlessen (50 min)",
+        "1 Praktijk-examen",
         "Optioneel: Tussentijdse Toets (+€275,-)",
-        "Optioneel: Praktijk-examen (+€300,-)",
       ],
       popular: false,
     },
     {
-      name: "Compleet Pakket",
-      price: "2525",
+      name: "All-In Pakket",
+      price: "2740",
       description: "Alles inclusief voor een zorgeloze weg naar je rijbewijs",
       features: ["40 Rijlessen (50 min)", "1 Tussentijdse Toets", "1 Praktijk-examen"],
       popular: false,
     },
     {
-      name: "Her-examen Pakket",
-      price: "555",
+      name: "Her-Examenpakket",
+      price: "585",
       description: "Extra voorbereiding voor je volgende examen",
       features: ["5 Rijlessen (50 min)", "1 Her-examen"],
       popular: false,
@@ -172,7 +172,7 @@ export default function PrijzenPage() {
               <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-10 sm:mt-12 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm">
                   <p className="text-lg sm:text-2xl font-bold text-primary">Vanaf</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">€55,- per les</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">€135,- theorie</p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-500/20 shadow-sm">
                   <p className="text-lg sm:text-2xl font-bold text-green-600">Gratis</p>
