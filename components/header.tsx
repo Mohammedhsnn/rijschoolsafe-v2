@@ -12,7 +12,7 @@ export function Header() {
   const pathname = usePathname()
 
   // Pages with dark hero backgrounds that need white text
-  const darkHeroPages = ["/", "/prijzen"]
+  const darkHeroPages = ["/"]
   const hasDarkHero = darkHeroPages.includes(pathname)
 
   useEffect(() => {
