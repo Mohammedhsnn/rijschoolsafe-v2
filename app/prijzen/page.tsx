@@ -1,4 +1,4 @@
-// Prijzenpagina - Rijschool Safe
+// Prijzenpagina - Rijschool Safe (test commit)
 import { Check, Info, ArrowRight, Euro, Gift, Percent } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
