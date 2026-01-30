@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 import "./globals.css"
 
 const geistSans = Geist({ subsets: ["latin"] })
@@ -21,8 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+      <body
+        className={`${geistSans?.variable ?? ""} ${geistMono?.variable ?? ""} font-sans`}
+        suppressHydrationWarning
+      >
         <Suspense fallback={null}>{children}</Suspense>
+        <WhatsAppFloat />
         <Analytics />
       </body>
     </html>

@@ -162,43 +162,21 @@ export default function HetBedrijfPage() {
           <div className="container mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto text-center">
               <div>
-                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">95%</div>
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">70%</div>
                 <div className="text-xs sm:text-base lg:text-lg text-muted-foreground">Slagingspercentage</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">500+</div>
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">250+</div>
                 <div className="text-xs sm:text-base lg:text-lg text-muted-foreground">Geslaagde Leerlingen</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">10+</div>
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">9+</div>
                 <div className="text-xs sm:text-base lg:text-lg text-muted-foreground">Jaar Ervaring</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-12 sm:py-16 lg:py-24 bg-primary text-white">
-          <div className="container mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Klaar Om Te Beginnen?</h2>
-            <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Neem contact op voor een gratis proefles en ontdek hoe ik jou kan helpen aan je rijbewijs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
-                <Link href="/contact">Gratis Proefles</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-white text-white hover:bg-white hover:text-primary bg-transparent w-full sm:w-auto"
-              >
-                <Link href="/lessen">Bekijk Lessen</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
       </div>
       <Footer />
     </>

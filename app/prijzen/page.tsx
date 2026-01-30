@@ -176,8 +176,8 @@ export default function PrijzenPage() {
                   <p className="text-xs sm:text-sm text-muted-foreground">€135,- theorie</p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-500/20 shadow-sm">
-                  <p className="text-lg sm:text-2xl font-bold text-green-600">Gratis</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Proefles</p>
+                  <p className="text-lg sm:text-2xl font-bold text-green-600">Proefles</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">50 minuten</p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm">
                   <p className="text-lg sm:text-2xl font-bold text-primary">6</p>

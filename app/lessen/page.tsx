@@ -9,7 +9,7 @@ export default function LessenPage() {
   const lesTypes = [
     {
       icon: Car,
-      title: "Gratis Proefles",
+      title: "Proefles",
       description:
         "Wil je kennismaken? Kom dan een proefles doen. Een proefles duurt 50 minuten, inclusief het evaluatiegesprek.",
       features: ["50 minuten rijles", "Evaluatiegesprek", "Kennismaking met instructeur", "Geen verplichtingen"],
@@ -45,7 +45,7 @@ export default function LessenPage() {
     {
       step: "1",
       title: "Kennismaking",
-      description: "Begin met een gratis proefles van 50 minuten inclusief evaluatiegesprek.",
+      description: "Begin met een proefles van 50 minuten inclusief evaluatiegesprek.",
     },
     {
       step: "2",
@@ -118,7 +118,7 @@ export default function LessenPage() {
                   asChild
                 >
                   <Link href="/contact">
-                    Gratis Proefles
+                    Proefles
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -157,7 +157,7 @@ export default function LessenPage() {
             <div className="text-center mb-10 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Ons Les Aanbod</h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Van gratis proefles tot complete lespakketten. Kies wat bij jou past.
+                Van proefles tot complete lespakketten. Kies wat bij jou past.
               </p>
             </div>
 
@@ -226,11 +226,11 @@ export default function LessenPage() {
           <div className="container mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Klaar Om Te Beginnen?</h2>
             <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Neem contact op voor een gratis proefles of bekijk onze voordelige lespakketten.
+              Neem contact op voor een proefles of bekijk onze voordelige lespakketten.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
-                <Link href="/contact">Gratis Proefles</Link>
+                <Link href="/contact">Proefles</Link>
               </Button>
               <Button
                 size="lg"

@@ -19,6 +19,7 @@ export function Footer() {
     Informatie: [
       { label: "Tarieven", href: "/prijzen" },
       { label: "Pakketten", href: "/prijzen" },
+      { label: "Leveringsvoorwaarden", href: "/leveringsvoorwaarden" },
     ],
   }
 

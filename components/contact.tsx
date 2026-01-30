@@ -1,9 +1,8 @@
 "use client"
 
+import Link from "next/link"
 import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { ContactForm } from "@/components/contact-form"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 
 export function Contact() {
@@ -44,42 +43,16 @@ export function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           <div>
-            <Card className="p-6 sm:p-8 mb-6 sm:mb-8">
-              <form className="space-y-5 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Voornaam</label>
-                    <Input placeholder="Jouw voornaam" className="text-base" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Achternaam</label>
-                    <Input placeholder="Jouw achternaam" className="text-base" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <Input type="email" placeholder="jouw@email.nl" className="text-base" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Telefoon</label>
-                  <Input type="tel" placeholder="+31 6 12345678" className="text-base" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Bericht</label>
-                  <Textarea
-                    placeholder="Vertel ons waar we je mee kunnen helpen..."
-                    rows={5}
-                    className="text-base resize-none"
-                  />
-                </div>
-                <Button
-                  className="w-full bg-primary hover:bg-primary/90 text-base sm:text-lg py-5 sm:py-6 h-auto"
-                  size="lg"
-                >
-                  Verstuur Bericht
-                </Button>
-              </form>
-            </Card>
+            <div className="mb-6 sm:mb-8">
+              <ContactForm />
+              <p className="mt-3 text-sm text-muted-foreground">
+                Na het versturen word je doorgestuurd naar onze{" "}
+                <Link href="/contact/dankjewel" className="text-primary hover:underline font-medium">
+                  bevestigingspagina
+                </Link>
+                .
+              </p>
+            </div>
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {contactInfo.map((info, index) => {

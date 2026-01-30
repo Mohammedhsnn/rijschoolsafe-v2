@@ -1,11 +1,9 @@
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { ContactForm } from "@/components/contact-form"
 
 export default function ContactPage() {
   const contactInfo = [
@@ -177,52 +175,7 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <Card className="border-2">
-                  <CardContent className="pt-6">
-                    <form className="space-y-6">
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="firstName">Voornaam *</Label>
-                          <Input id="firstName" placeholder="Je voornaam" required />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="lastName">Achternaam *</Label>
-                          <Input id="lastName" placeholder="Je achternaam" required />
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
-                        <Input id="email" type="email" placeholder="je@email.nl" required />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Telefoon *</Label>
-                        <Input id="phone" type="tel" placeholder="+31 6 12345678" required />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="subject">Onderwerp</Label>
-                        <Input id="subject" placeholder="Waar gaat je bericht over?" />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="message">Bericht *</Label>
-                        <Textarea
-                          id="message"
-                          placeholder="Vertel ons waar we je mee kunnen helpen..."
-                          rows={6}
-                          required
-                        />
-                      </div>
-
-                      <Button type="submit" size="lg" className="w-full">
-                        <Send className="w-5 h-5 mr-2" />
-                        Verstuur Bericht
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
+                <ContactForm />
               </div>
 
               {/* Map & Business Info */}
@@ -275,7 +228,7 @@ export default function ContactPage() {
                   <CardContent className="pt-6">
                     <p className="text-sm text-muted-foreground">
                       Op al onze diensten zijn onze{" "}
-                      <a href="#" className="text-primary hover:underline font-medium">
+                      <a href="/leveringsvoorwaarden" className="text-primary hover:underline font-medium">
                         leveringsvoorwaarden
                       </a>{" "}
                       van toepassing.
@@ -290,9 +243,9 @@ export default function ContactPage() {
         {/* CTA Section */}
         <section className="py-12 sm:py-16 lg:py-24 bg-primary text-white">
           <div className="container mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Gratis Proefles?</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Proefles?</h2>
             <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Wil je kennismaken? Kom dan een gratis proefles doen van 50 minuten, inclusief evaluatiegesprek.
+              Wil je kennismaken? Kom dan een proefles doen van 50 minuten, inclusief evaluatiegesprek.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
