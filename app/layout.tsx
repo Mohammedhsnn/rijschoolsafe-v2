@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Rijschool Safe - Jouw Betrouwbare Rijschool",
   description: "Leren autorijden is een spannende en nieuwe uitdaging. Rijschool Safe helpt je daar graag bij!",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({

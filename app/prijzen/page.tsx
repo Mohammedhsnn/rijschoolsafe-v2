@@ -69,16 +69,16 @@ export default function PrijzenPage() {
     {
       category: "Theorie",
       items: [
-        { name: "Theorie B online", price: "€59,-" },
-        { name: "Theorie B online pakket", price: "€115,-" },
         { name: "Theorie Examen", price: "€55,-" },
+        { name: "Theorie B online", price: "€80,-" },
+        { name: "Theorie B online pakket", price: "€125,-" },
       ],
     },
     {
       category: "Praktijk",
       items: [
-        { name: "Losse rijles (50 min)", price: "€55,-" },
-        { name: "10 lessen (50 min)", price: "€525,-" },
+        { name: "Losse rijles (50 min)", price: "€58,-" },
+        { name: "10 lessen (50 min)", price: "€565,-" },
       ],
     },
     {
@@ -154,8 +154,8 @@ export default function PrijzenPage() {
                   className="bg-primary hover:bg-primary/90 text-white text-base md:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto shadow-lg shadow-primary/25"
                   asChild
                 >
-                  <Link href="/contact">
-                    Kies Je Pakket
+                  <Link href="#pakketten">
+                    Pakketten
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -165,31 +165,31 @@ export default function PrijzenPage() {
                   className="border-primary text-primary hover:bg-primary hover:text-white text-base md:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto w-full sm:w-auto bg-transparent"
                   asChild
                 >
-                  <Link href="/lessen">Bekijk Lessen</Link>
+                  <Link href="#losse-prijzen">Tarieven</Link>
                 </Button>
               </div>
 
               {/* Price highlights */}
-              <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-10 sm:mt-12 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm">
-                  <p className="text-lg sm:text-2xl font-bold text-primary">Vanaf</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">€135,- theorie</p>
-                </div>
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-500/20 shadow-sm">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-10 sm:mt-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <Link href="#losse-prijzen" className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm hover:border-primary/30 hover:shadow-md transition-all block text-center">
+                  <p className="text-lg sm:text-2xl font-bold text-primary">Theorie</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Vanaf €135,-</p>
+                </Link>
+                <Link href="/contact" className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-500/20 shadow-sm hover:border-green-500/40 hover:shadow-md transition-all block text-center ml-2 sm:ml-3">
                   <p className="text-lg sm:text-2xl font-bold text-green-600">Proefles</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">50 minuten</p>
-                </div>
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm">
-                  <p className="text-lg sm:text-2xl font-bold text-primary">6</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Pakketten</p>
-                </div>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Neem contact op</p>
+                </Link>
+                <Link href="#pakketten" className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm hover:border-primary/30 hover:shadow-md transition-all block text-center">
+                  <p className="text-lg sm:text-2xl font-bold text-primary">Praktijk</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">v.a. €54,- per les</p>
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
         {/* Pakketten */}
-        <section className="py-12 sm:py-16 lg:py-24">
+        <section id="pakketten" className="py-12 sm:py-16 lg:py-24 scroll-mt-20">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="text-center mb-10 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Lespakketten</h2>
@@ -237,7 +237,7 @@ export default function PrijzenPage() {
         </section>
 
         {/* Losse Prijzen */}
-        <section className="py-12 sm:py-16 lg:py-24 bg-muted/30">
+        <section id="losse-prijzen" className="py-12 sm:py-16 lg:py-24 bg-muted/30 scroll-mt-20">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="text-center mb-10 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Losse Prijzen</h2>

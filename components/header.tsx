@@ -47,7 +47,7 @@ export function Header() {
     if (isScrolled) {
       return { rijschool: "text-secondary", safe: "text-primary" }
     }
-    return hasDarkHero 
+    return hasDarkHero
       ? { rijschool: "text-white/80", safe: "text-primary" }
       : { rijschool: "text-secondary", safe: "text-primary" }
   }
@@ -83,6 +83,7 @@ export function Header() {
               ))}
             </nav>
 
+           
             <div className="hidden md:flex items-center gap-4">
               <a
                 href="tel:+31640146812"

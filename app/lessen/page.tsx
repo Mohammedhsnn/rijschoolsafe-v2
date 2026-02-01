@@ -11,14 +11,14 @@ export default function LessenPage() {
       icon: Car,
       title: "Proefles",
       description:
-        "Wil je kennismaken? Kom dan een proefles doen. Een proefles duurt 50 minuten, inclusief het evaluatiegesprek.",
-      features: ["50 minuten rijles", "Evaluatiegesprek", "Kennismaking met instructeur", "Geen verplichtingen"],
+        "Wil je kennismaken? Kom dan een proefles doen, inclusief het evaluatiegesprek.",
+      features: ["Evaluatiegesprek", "Kennismaking met instructeur", "Geen verplichtingen"],
     },
     {
       icon: Users,
       title: "Losse Rijlessen",
       description: "Flexibel lessen boeken wanneer het jou uitkomt. Ideaal voor mensen met een drukke agenda.",
-      features: ["50 minuten per les", "Flexibel inplannen", "€55,- per les", "Betalen per les mogelijk"],
+      features: ["50 minuten per les", "Flexibel inplannen", "€58,- per les", "Betalen per les mogelijk"],
     },
     {
       icon: Award,
