@@ -1,12 +1,14 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Clock, Route, Gauge } from "lucide-react"
+import Link from "next/link"
 
 export function Services() {
   const services = [
     {
       title: "Tussentijdse Toets",
       icon: Clock,
+      href: "/lessen",
       description:
         "Een tussentijdse toets is een soort proefexamen. De toets duurt even lang als een rijexamen en heeft dezelfde onderdelen.",
       features: [
@@ -19,6 +21,7 @@ export function Services() {
     {
       title: "Snelwegtraining",
       icon: Route,
+      href: "/lessen",
       description:
         "2 uur alleen snelwegen rijden en niet alleen maar in de buurt (die je waarschijnlijk wel kent) maar ook verder weg.",
       features: [
@@ -31,6 +34,7 @@ export function Services() {
     {
       title: "Spoedopleiding",
       icon: Gauge,
+      href: "/prijzen",
       description:
         "Wil je graag snel je rijbewijs halen? Dan is onze tien- of vijftiendaagse spoed rijopleiding misschien wel wat voor jou.",
       features: ["Intensieve training", "Snel je rijbewijs halen", "Persoonlijke begeleiding", "Flexibele planning"],
@@ -73,7 +77,9 @@ export function Services() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-sm sm:text-base">Lees Meer</Button>
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-sm sm:text-base" asChild>
+                    <Link href={service.href}>Lees Meer</Link>
+                  </Button>
                 </div>
               </Card>
             )

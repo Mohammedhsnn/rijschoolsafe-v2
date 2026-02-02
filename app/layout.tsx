@@ -3,12 +3,8 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import dynamic from "next/dynamic"
+import { WhatsAppFloatWrapper } from "@/components/whatsapp-float-wrapper"
 import "./globals.css"
-
-const WhatsAppFloat = dynamic(() => import("@/components/whatsapp-float").then((m) => ({ default: m.WhatsAppFloat })), {
-  ssr: false,
-})
 
 const geistSans = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -34,7 +30,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Suspense fallback={null}>{children}</Suspense>
-        <WhatsAppFloat />
+        <WhatsAppFloatWrapper />
         <Analytics />
       </body>
     </html>
