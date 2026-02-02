@@ -3,15 +3,19 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle, Phone, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Hero() {
   return (
     <section id="home" className="relative min-h-[140vh] sm:min-h-[130vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/mercedes-safe-hero.png"
           alt="Rijschool Safe - Mercedes met SAFE bord"
-          className="w-full h-full object-cover object-[center_38%]"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_38%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/70 to-transparent" />
       </div>
@@ -60,7 +64,7 @@ export function Hero() {
           </div>
 
           <p className="text-base sm:text-lg text-primary-foreground/85 mb-6 max-w-xl">
-            Rijles in Axel en Zeeuws-Vlaanderen · Proefles van 50 minuten · Persoonlijke begeleiding van begin tot rijbewijs.
+            Rijles in Axel en Zeeuws-Vlaanderen · Persoonlijke begeleiding van begin tot rijbewijs.
           </p>
 
           <div className="flex flex-wrap gap-4 sm:gap-6">

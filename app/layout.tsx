@@ -3,8 +3,12 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import { WhatsAppFloat } from "@/components/whatsapp-float"
+import dynamic from "next/dynamic"
 import "./globals.css"
+
+const WhatsAppFloat = dynamic(() => import("@/components/whatsapp-float").then((m) => ({ default: m.WhatsAppFloat })), {
+  ssr: false,
+})
 
 const geistSans = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
