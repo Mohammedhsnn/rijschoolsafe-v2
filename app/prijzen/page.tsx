@@ -11,7 +11,7 @@ export default function PrijzenPage() {
   const pakketten = [
     {
       name: "Theorie Auto (B)",
-      price: "135",
+      price: "125",
       description: "Alles wat je nodig hebt voor je theorie-examen",
       features: ["1 Theorieboek", "1 Online Cursus", "1 Theorie Examen"],
       popular: false,
@@ -173,7 +173,7 @@ export default function PrijzenPage() {
               <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-10 sm:mt-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
                 <Link href="#losse-prijzen" className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/10 shadow-sm hover:border-primary/30 hover:shadow-md transition-all block text-center">
                   <p className="text-lg sm:text-2xl font-bold text-primary">Theorie</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Vanaf €135,-</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Vanaf €125,-</p>
                 </Link>
                 <Link href="/contact" className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-500/20 shadow-sm hover:border-green-500/40 hover:shadow-md transition-all block text-center ml-2 sm:ml-3">
                   <p className="text-lg sm:text-2xl font-bold text-green-600">Proefles</p>
